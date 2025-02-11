@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input, Button, Form } from 'antd';
 import 'antd/dist/reset.css';
+import './login.scss'; // 引入自定义的CSS文件
 
 interface LoginProps {}
 
@@ -32,6 +33,7 @@ function Login(props: LoginProps) {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            style={{ width: '300px', height: '40px' }} // 设置输入框宽高
           />
         </Form.Item>
         <Form.Item
@@ -43,10 +45,11 @@ function Login(props: LoginProps) {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            style={{ width: '300px', height: '40px' }} // 设置输入框宽高
           />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" onClick={handleLogin}>
+          <Button type="primary" onClick={handleLogin} style={{ width: '300px', height: '40px' }}> 
             登录
           </Button>
         </Form.Item>

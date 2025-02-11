@@ -24,20 +24,20 @@ function Login(props: LoginProps) {
       <h2>登录</h2>
       <Form layout="vertical">
         <Form.Item
-          label="Email"
+          label="邮箱"
           name="email"
           rules={[{ required: true, message: '请输入您的邮箱!' }]}
         >
           <Input
             type="email"
-            placeholder="Email"
+            placeholder="邮箱"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={{ width: '300px', height: '40px' }} // 设置输入框宽高
           />
         </Form.Item>
         <Form.Item
-          label="Password"
+          label="密码"
           name="password"
           rules={[{ required: true, message: '请输入密码!' }]}
         >

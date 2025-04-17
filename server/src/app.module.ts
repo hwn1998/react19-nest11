@@ -5,6 +5,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/user.entity';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+
+// mysql关键命令
+
+// 启动服务
+// net start mysql 
+
+// 登录mysql
+// mysql -u root -p
 @Module({
   imports: [
     TypeOrmModule.forRoot({

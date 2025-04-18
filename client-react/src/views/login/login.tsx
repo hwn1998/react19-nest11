@@ -5,7 +5,7 @@ import { Input, Button, Form } from 'antd';
 import 'antd/dist/reset.css';
 import './login.scss'; // 引入自定义的CSS文件
 
-interface LoginProps {}
+interface LoginProps { }
 
 function Login(props: LoginProps) {
   const [email, setEmail] = useState('');
@@ -24,13 +24,13 @@ function Login(props: LoginProps) {
       <h2>登录</h2>
       <Form layout="vertical">
         <Form.Item
-          label="邮箱"
-          name="email"
-          rules={[{ required: true, message: '请输入您的邮箱!' }]}
+          label="用户名"
+          name="name"
+          rules={[{ required: true, message: '请输入您的用户名!' }]}
         >
           <Input
             type="email"
-            placeholder="邮箱"
+            placeholder="用户名"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={{ width: '300px', height: '40px' }} // 设置输入框宽高
@@ -49,7 +49,7 @@ function Login(props: LoginProps) {
           />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" onClick={handleLogin} style={{ width: '300px', height: '40px' }}> 
+          <Button type="primary" onClick={handleLogin} style={{ width: '300px', height: '40px' }}>
             登录
           </Button>
         </Form.Item>
